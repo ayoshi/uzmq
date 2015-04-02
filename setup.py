@@ -7,7 +7,13 @@ import sys
 
 from setuptools import setup, find_packages
 
-from uzmq import __version__
+with open(
+        os.path.join(
+            os.path.dirname(__file__), "uzmq", "__version__.py"
+        )
+) as version_file:
+    exec(version_file.read())
+
 
 py_version = sys.version_info[:2]
 

@@ -9,9 +9,7 @@ Classes
 - ``ZMQPoll`` : :doc:`poll` class
 
 """
-
-version_info = (0, 3, 1)
-__version__ = ".".join([str(v) for v in version_info])
+from __version__ import __version__
 
 from uzmq.poll import ZMQPoll
 from uzmq.sock import ZMQ
